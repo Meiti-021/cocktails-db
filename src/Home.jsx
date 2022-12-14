@@ -3,7 +3,10 @@ import "./home.css";
 const Home = () => {
   return (
     <div className="home">
-      <h1>I'm HOme</h1>
+      <section className="search">
+        <h3>Search Your Favorite Cocktail</h3>
+        <input type="search" name="search" id="search" />
+      </section>
     </div>
   );
 };

@@ -21,6 +21,12 @@
   -webkit-text-size-adjust: 100%;
 }
 
+body {
+  background-image: url("https://static.vecteezy.com/system/resources/thumbnails/000/964/070/small_2x/cocktail-beverage-set.jpg");
+  min-height: 100vh;
+  background-position: center;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
