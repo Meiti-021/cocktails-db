@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./card.css";
 
 const Card = () => {
+  const [toggle, setToggle] = useState(false);
+  const toggleHandler = () => {
+    toggle ? setToggle(false) : setToggle(true);
+  };
   return (
     <div className="card">
       <img
@@ -9,8 +13,19 @@ const Card = () => {
         alt=""
         className="cock-pic"
       />
-      <div className="cock-info-container">
-        <button className="tuggle">^</button>
+      <div
+        className={
+          toggle
+            ? "cock-info-container active-card-info"
+            : "cock-info-container"
+        }
+      >
+        <button
+          className={toggle ? "tuggle tuggle-on" : "tuggle"}
+          onClick={toggleHandler}
+        >
+          ^
+        </button>
         <div className="cock-info">
           <p className="name">GG</p>
           <p className="glass">Collins Glass</p>

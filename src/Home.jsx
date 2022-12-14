@@ -1,4 +1,5 @@
 import React from "react";
+import Card from "./card";
 import "./home.css";
 const Home = () => {
   return (
@@ -9,7 +10,9 @@ const Home = () => {
       </section>
       <section className="products">
         <h1>cocktails</h1>
-        <div className="product-container"></div>
+        <div className="product-container">
+          <Card />
+        </div>
       </section>
     </div>
   );
