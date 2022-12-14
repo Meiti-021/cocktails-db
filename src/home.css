@@ -1,0 +1,6 @@
+.home {
+  border: 10px solid red;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
