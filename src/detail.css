@@ -1,0 +1,35 @@
+.cock-detail {
+  width: 100%;
+  height: auto;
+  display: flex;
+  padding: 50px;
+  gap: 70px;
+  justify-content: center;
+}
+.cock-detail img {
+  display: block;
+  width: 300px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+.cock-detail-info {
+  color: #000;
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  justify-content: center;
+}
+
+.cock-detail-info p {
+  background-color: #fff;
+  width: 300px;
+  padding: 7px;
+  border-left: 15px solid blue;
+}
+
+.cock-detail-info p span {
+  float: right;
+}

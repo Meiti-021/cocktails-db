@@ -5,8 +5,11 @@ const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
   const [dataBase, setDataBase] = useState(false);
+  const [cockDetail, setCockDetail] = useState(false);
   return (
-    <AppContext.Provider value={{ dataBase, setDataBase }}>
+    <AppContext.Provider
+      value={{ dataBase, setDataBase, cockDetail, setCockDetail }}
+    >
       {children}
     </AppContext.Provider>
   );
