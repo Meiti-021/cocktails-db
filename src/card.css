@@ -28,6 +28,7 @@
   transform: rotate(-8deg);
   transform-origin: bottom;
   transition: 0.5s bottom;
+  left: -10px;
 }
 
 .cock-info {
@@ -66,7 +67,7 @@ p.category {
   color: #fff;
   text-shadow: 0px 0px 10px #000;
   animation: toggle 1s infinite linear;
-  margin-left: -5px;
+  margin-left: 0px;
   transition: 0.5s transform;
 }
 

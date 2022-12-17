@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { useContext } from "react";
 
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
+  const [dataBase, setDataBase] = useState(false);
   return (
-    <AppContext.Provider value={{ id: null }}>{children}</AppContext.Provider>
+    <AppContext.Provider value={{ dataBase, setDataBase }}>
+      {children}
+    </AppContext.Provider>
   );
 };
 
