@@ -8,7 +8,10 @@ const Home = () => {
   const { dataBase, setDataBase } = useGlobalContext();
   useEffect(() => {
     axios("https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a").then(
-      (res) => console.log(res)
+      (res) => {
+        setDataBase(res);
+        console.log(res.data.drinks);
+      }
     );
   }, []);
   if (!dataBase) {
@@ -22,7 +25,11 @@ const Home = () => {
       </section>
       <section className="products">
         <h1>cocktails</h1>
-        <div className="product-container">{/* <Card /> */}</div>
+        <div className="product-container">
+          {dataBase.data.drinks.map((drink) => {
+            return <Card {...drink} key={drink.idDrink} />;
+          })}
+        </div>
       </section>
     </div>
   );

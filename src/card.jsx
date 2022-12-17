@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import "./card.css";
 
-const Card = ({ drink }) => {
+const Card = ({ strDrinkThumb, strDrink, strGlass, strAlcoholic }) => {
   const [toggle, setToggle] = useState(false);
   const toggleHandler = () => {
     toggle ? setToggle(false) : setToggle(true);
   };
   return (
     <div className="card">
-      <img src={drink.strDrinkThumb} alt="" className="cock-pic" />
+      <img src={strDrinkThumb} alt="" className="cock-pic" />
       <div
         className={
           toggle
@@ -23,9 +23,9 @@ const Card = ({ drink }) => {
           ^
         </button>
         <div className="cock-info">
-          <p className="name">{drink.strDrink}</p>
-          <p className="glass">{drink.Cocktail.glass}</p>
-          <p className="category">{drink.strAlcoholic}</p>
+          <p className="name">{strDrink}</p>
+          <p className="glass">{strGlass}</p>
+          <p className="category">{strAlcoholic}</p>
           <button className="more">DETAILS</button>
         </div>
       </div>
